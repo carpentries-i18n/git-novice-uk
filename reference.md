@@ -15,67 +15,67 @@ layout: reference
 
 {:auto_ids}
 changeset
-:   A group of changes to one or more files that are or will be added
-    to a single [commit](#commit) in a [version control](#version-control)
-    [repository](#repository).
+:   Група змін до одного або декількох файлів, які є або будуть додані до одного
+    [коміту](#commit) в [контролі версій](#version-control)
+    [репозиторію](#repository).
 
-commit
-:   To record the current state of a set of files (a [changeset](#changeset))
-    in a [version control](#version-control) [repository](#repository). As a noun,
-    the result of committing, i.e. a recorded changeset in a repository.
-    If a commit contains changes to multiple files,
-    all of the changes are recorded together.
+коміт
+:   Для запису поточного стану набору файлів ([набір змін](#changeset))
+    у [контролі версій](#version-control) [репозиторію](#repository). Як іменник,
+    результат коміту, тобто записаний набір змін у репозиторії.
+    Якщо коміт містить зміни до декількох файлів,
+    всі зміни записуються разом.
 
-conflict
-:   A change made by one user of a [version control system](#version-control)
-    that is incompatible with changes made by other users.
-    Helping users [resolve](#resolve) conflicts
-    is one of version control's major tasks.
+конфлікт
+:   Зміна, зроблена одним користувачем [система управління версіями](#version-control),
+    несумісна зі змінами, внесеними іншими користувачами.
+    Допомога користувачам [вирішити](#resolve) конфлікти
+    є одним з основних завдань управління версіями.
 
 HTTP
-:   The Hypertext Transfer [Protocol](#protocol) used for sharing web pages and other data
-    on the World Wide Web.
+:   Hypertext Transfer [Протокол](#protocol), що використовується для обміну веб-сторінками та іншими даними
+    у всесвітній павутині.
 
-merge
-:   (a repository): To reconcile two sets of changes to a
-    [repository](#repository).
+об'єднати
+:   (репозиторій): Для узгодження двох наборів змін з
+    [репозиторіїв](#repository).
 
-protocol
-:   A set of rules that define how one computer communicates with another.
-    Common protocols on the Internet include [HTTP](#http) and [SSH](#ssh).
+протокол
+:   Набір правил, які визначають, як один комп'ютер спілкується з іншим.
+    Загальні протоколи в інтернеті включають [HTTP](#http) та [SSH](#ssh).
 
-remote
-:   (of a repository) A version control [repository](#repository) connected to another,
-    in such way that both can be kept in sync exchanging [commits](#commit).
+віддалений
+:   (репозиторію) Контроль версій [репозиторій](#repository), підключений до іншого,
+    таким чином, що обидва можуть бути збережені в синхронному обміні [комітів](#commit).
 
-repository
-:   A storage area where a [version control](#version-control) system
-    stores the full history of [commits](#commit) of a project and information
-    about who changed what, when.
+репозиторій
+:   Область зберігання, де [конроль версій](#version-control)  система
+    зберігає повну історію [комітів](#commit) проєкту та інформацію
+    про те, хто що змінив і коли.
 
-resolve
-:   To eliminate the [conflicts](#conflict) between two or more incompatible changes to a file or set of files
-    being managed by a [version control](#version-control) system.
+вирішити
+:   Для усунення [конфліктів](#conflict) між двома або більше несумісними змінами до файлу або набору файлів
+    управляється системою [контроль версій](#version-control).
 
-revision
-:   A synonym for [commit](#commit).
+ревізія
+:   Синонім [коміту](#commit).
 
 SHA-1
-:   [SHA-1 hashes](https://en.wikipedia.org/wiki/SHA-1) is what Git uses to compute identifiers, including for commits.
-    To compute these, Git uses not only the actual change of a commit, but also its metadata (such as date, author,
-    message), including the identifiers of all commits of preceding changes. This makes Git commit IDs virtually unique.
-    I.e., the likelihood that two commits made independently, even of the same change, receive the same ID is exceedingly
-    small.
+:   [SHA-1 hashes](https://en.wikipedia.org/wiki/SHA-1) - це те, що Git використовує для обчислення ідентифікаторів, у тому числі для комітів.
+    Для їх обчислення Git використовує не тільки фактичну зміну коміту, але і його метадані (такі як дата, автор,
+    повідомлення), включаючи ідентифікатори всіх комітів попередніх змін. Це робить ідентифікатори комітів Git практично унікальними.
+    Тобто ймовірність того, що два коміти, зроблені незалежно один від одного, навіть однієї і тієї ж зміни, отримують один і той же ідентифікатор, надзвичайно
+    мала.
 
 SSH
-:   The Secure Shell [protocol](#protocol) used for secure communication between computers.
+:   Secure Shell [протокол](#protocol) використовується для безпечного зв'язку між комп'ютерами.
 
-timestamp
-:   A record of when a particular event occurred.
+часова мітка
+:   Запис про те, коли сталася певна подія.
 
-version control
-:   A tool for managing changes to a set of files.
-    Each set of changes creates a new [commit](#commit) of the files;
-    the version control system allows users to recover old commits reliably,
-    and helps manage conflicting changes made by different users.
+контроль версій
+:   Інструмент для керування змінами набору файлів.
+    Кожен набір змін створює новий [коміт](#commit) файлів;
+    система контролю версій дозволяє користувачам надійно відновлювати старі коміти,
+    і допомагає керувати суперечливими змінами, внесеними різними користувачами.
 

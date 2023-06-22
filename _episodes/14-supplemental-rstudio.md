@@ -1,157 +1,157 @@
 ---
-title: "Supplemental: Using Git from RStudio"
+title: "Додатково: Використання Git від RStudio"
 teaching: 10
 exercises: 0
 questions:
-- "How can I use Git with RStudio?"
+- "Як я можу використовувати Git за допомогою RStudio?"
 objectives:
-- "Understand how to use Git from RStudio."
+- "Зрозуміти, як використовувати Git з RStudio."
 keypoints:
-- "Using RStudio's Git integration allows you to version control a project over time."
+- "Використання Git інтеграції RStudio дозволяє з часом конторолювати версіями проєкту."
 ---
 
-Version control can be very useful when developing data analysis scripts. For
-that reason, the popular development environment
-[RStudio][rstudio] for the R programming language has built-in
-integration with Git. While some advanced Git features still require the
-command-line, RStudio has a nice interface for many common Git operations.
+Контроль версій може бути дуже корисним при розробці сценаріїв аналізу даних. З
+цієї причини популярне середовище розвитку
+[RStudio][rstudio] для мови програмування R має вбудовану
+Хоча деякі розширені функції Git все ще вимагають 
+командного рядка, RStudio має хороший інтерфейс для багатьох поширених операцій Git.
 
-RStudio allows us to create a [project][rstudio-projects] associated with a
-given directory to keep track of various related files. To be able to track the
-development of the project over time, to be able to revert to previous
-versions, and to collaborate with others, we version control the Rstudio
-project with Git. To get started using Git in RStudio, we create a new project:
+RStudio дозволяє нам створювати [проєкт][rstudio-проєкти], пов'язані з
+даним каталогом для відстеження різних пов'язаних файлів. Щоб мати
+можливість відстежувати розвиток проєкту з плином часу, щоб мати можливість повернутися до
+попередніх версій, і співпрацювати з іншими, ми виконуємо керування проектом Rstudio з Git.
+Для початку використання Git в RStudio ми створюємо новий проєкт:
 
-![RStudio screenshot showing the file menu dropdown with "New Project..." selected](../fig/RStudio_screenshot_newproject.png)
+![[Знімок екрана RStudio, що показує меню файлу, випадаюче з вибраним пунктом "New Project..."](../fig/RStudio_screenshot_newproject.png)
 
-This opens a dialog asking us how we want to create the project. We have
-some options here. Let's say that we want to use RStudio with the planets
-repository that we already made. Since that repository lives in a directory on
-our computer, we choose the option "Existing Directory":
+Відкриває діалогове вікно з запитанням про те, як ми хочемо створити проєкт. У нас є
+деякі варіанти тут. Припустимо, що ми хочемо використовувати RStudio з
+репозиторієм planets, який ми вже створили. Оскільки цей репозиторій живе в каталозі на нашому комп'ютері, ми
+вибираємо опцію "Existing Directory":
 
-![RStudio screenshot showing New Project dialog window with "Create project from existing directory" selected](../fig/RStudio_screenshot_existingdirectory.png)
+![Знімок екрана RStudio, що показує діалогове вікно New Project за допомогою обраного "Create project from existing directory"](../fig/RStudio_screenshot_existingdirectory.png)
 
-> ## Do You See a "Version Control" Option?
+> ## Ви бачите опцію "Version Control"?
 >
-> Although we're not going to use it here, there should be a "version control"
-> option on this menu. That is what you would click on if you wanted to
-> create a project on your computer by cloning a repository from GitHub.
-> If that option is not present, it probably means that RStudio doesn't know
-> where your Git executable is, and you won't be able to progress further
-> in this lesson until you tell RStudio where it is.  
+> Хоча ми не збираємося використовувати її тут, в цьому меню повинна бути опція "version control"
+> option on this menu. Це те, що ви б натиснули, якщо ви хочете
+> створити проєкт на вашому комп'ютері, клонуючи репозиторій з GitHub.
+> Якщо цей параметр відсутній, це, ймовірно, означає, що RStudio не знає,
+> де знаходиться ваш виконуваний файл Git, і ви не зможете прогресувати далі
+> в цьому уроці, поки ви не скажете RStudio, де це.  
 >
-> ### Find your Git Executable
+> ### Знайдіть виконуваний файл Git
 >
-> First let's make sure that Git is installed on your computer.
-> Open your shell on Mac or Linux, or on Windows open the command prompt
-> and then type:
+> Спочатку давайте переконаємося, що Git встановлений на вашому комп'ютері.
+> Відкрийте свій shell на Mac або Linux, або в Windows відкрийте командний рядок,
+> а потім введіть:
 > - `which git` (macOS, Linux)
 > - `where git` (Windows)
 >
-> If there is no version of Git on your computer, please follow the 
-> [Git installation instructions](https://swcarpentry.github.io/git-novice/setup.html)
-> in the setup of this lesson to install Git now. Next open your shell or command prompt 
-> and type `which git` (macOS, Linux), or `where git` (Windows).
-> Copy the path to the git executable.
+> Якщо на вашому комп'ютері немає версії Git, будь ласка, дотримуйтесь 
+> [Інструкції по установці Git](https://swcarpentry.github.io/git-novice/setup.html)
+> в налаштуванні цього уроку, щоб встановити Git зараз. Далі відкрийте shell або командний рядок 
+> і введіть `which git` (macOS, Linux), або `where git` (Windows).
+> Скопіюйте шлях до виконуваного файла git.
 >
-> On one Windows computer which had GitHub Desktop installed on it, the path was:
+> На одному комп'ютері Windows, на якому встановлено GitHub Desktop, шлях був:
 > `C:/Users/UserName/AppData/Local/GitHubDesktop/app-1.1.1/resources/app/git/cmd/git.exe`
 >
-> NOTE: The path on your computer will be somewhat different.
+> ПРИМІТКА: Шлях на вашому комп'ютері буде дещо іншим.
 >
-> ### Tell RStudio where to find GitHub
+> ### Скажіть RStudio де знайти GitHub
 >
-> In RStudio, go to the `Tools` menu > `Global Options` > `Git/SVN` and then
-> browse to the Git executable you found in the command prompt or shell. Now restart
+> У RStudio перейдіть до меню `Tools` > `Global Options` > `Git/SVN`, а потім
+> перейдіть до виконуваного файлу Git, який ви знайшли в командному рядку або shell. Тепер перезапустіть
 > RStudio.
-> Note: Even if you have Git installed, you may need
-> to accept the Xcode license if you are using macOS.
+> Примітка: Навіть якщо у вас встановлений Git, вам може знадобитися прийняти ліцензію
+> Xcode. якщо ви використовуєте macOS.
 {: .callout}
 
-Next, RStudio will ask which existing directory we want to use. Click
-"Browse..." and navigate to the correct directory, then click "Create Project":
+Далі RStudio запитає, який існуючий каталог ми хочемо використовувати. Натисніть
+"Browse..." і перейдіть до правильної директорії, потім натисніть"Create Project":
 
 ![](../fig/RStudio_screenshot_navigateexisting.png)
 
-Ta-da! We have created a new project in RStudio within the existing planets
-repository. Notice the vertical "Git" menu in the menu bar. RStudio has
-recognized that the current directory is a Git repository, and gives us a
-number of tools to use Git:
+Та-да! Ми створили новий проект в RStudio в рамках існуючого planets
+репозиторію. Зверніть увагу на вертикальне меню "Git" на панелі меню. RStudio визнав, що
+поточна директорія є Git репозиторієм, і дає нам
+ряд інструментів для використання Git:
 
-![RStudio window after new project is created with large arrow pointing to vertical Git menu bar.](../fig/RStudio_screenshot_afterclone.png)
+! [RStudio вікно після створення нового проєкту з великою стрілкою, що вказує на вертикальну панель меню Git.](../fig/RStudio_screenshot_afterclone.png)
 
-To edit the existing files in the repository, we can click on them in the
-"Files" panel on the lower right. Now let's add some additional information
-about Pluto:
+Щоб редагувати існуючі файли в репозиторії, ми можемо натиснути на них в панелі
+"Files" у правому нижньому куті. Тепер додамо додаткову інформацію
+про Плутон:
 
 ![](../fig/RStudio_screenshot_editfiles.png)
 
-Once we have saved our edited files, we can use RStudio to commit the changes
-by clicking on "Commit..." in the Git menu:
+Після того, як ми зберегли наші відредаговані файли, ми можемо використовувати RStudio для фіксації змін, 
+натиснувши на "Commit..." в меню Git:
 
-![RStudio screenshot showing the Git menu dropdown with "Commit..." selected](../fig/RStudio_screenshot_commit.png)
+![Знімок екрана RStudio, що показує меню Git, що випадає з вибраним пунктом "Commit..."](../fig/RStudio_screenshot_commit.png)
 
-This will open a dialogue where we can select which files to commit (by
-checking the appropriate boxes in the "Staged" column), and enter a commit
-message (in the upper right panel). The icons in the "Status" column indicate
-the current status of each file. Clicking on a file shows information about
-changes in the lower panel (using output of `git diff`). Once everything is the
-way we want it, we click "Commit":
+Це відкриє діалогове вікно, де ми можемо вибрати, які файли для фіксації (перевіряючи відповідні поля
+в стовпці "Staged"), і ввести повідомлення коміту
+(у верхній правій панелі). Іконки у стовпці "Status" вказують 
+поточний стан кожного файлу. Клацання на файлі показує інформацію про зміни на нижній
+панелі (за допомогою результату `git diff`). Як тільки 
+все так, як ми хочемо, ми натискаємо "Commit":
 
 ![](../fig/RStudio_screenshot_review.png)
 
-The changes can be pushed by selecting "Push Branch" from the Git menu. There
-are also options to pull from the remote repository, and to view the commit
-history:
+Зміни можна відправити, вибравши "Push Branch" з меню Git. 
+Існують також варіанти отримання змін з віддаленого репозиторію та перегляду історії 
+комітів:
 
-![RStudio screenshot showing the git menu dropdown with "History" selected](../fig/RStudio_screenshot_history.png)
+![Знімок екрана RStudio, що показує спадне меню git з вибраним пунктом "History"](../fig/RStudio_screenshot_history.png)
 
-> ## Are the Push/Pull Commands Grayed Out?
+> ## Чи Є Команди Push/Pull Неактивними?
 >
-> Grayed out Push/Pull commands generally mean that RStudio doesn't know the
-> location of your remote repository (e.g. on GitHub). To fix this, open a
-> terminal to the repository and enter the command: `git push -u origin
-> main`. Then restart RStudio.
+> Неактивні команди Push/Pull зазвичай означають, що RStudio не знає
+> місцезнаходження вашого віддаленого репозиторію (наприклад, на GitHub). Щоб виправити це, відкрийте 
+> термінал у репозиторії і введіть команду: `git push -u origin
+> main`. Потім перезавантажте RStudio.
 {: .callout}
 
-If we click on "History", we can see a graphical version of what `git log`
-would tell us:
+Якщо натиснути на "History", ми можемо побачити графічну версію того, що `git log`
+сказав би нам:
 
 ![](../fig/RStudio_screenshot_viewhistory.png)
 
-RStudio creates a number of files that it uses to keep track of a project. We
-often don't want to track these, in which case we add them to our `.gitignore`
-file:
+RStudio створює ряд файлів, які він використовує для відстеження проєкту. Ми часто
+не хочемо відстежувати їх; в цьому випадку ми додаємо їх до нашого `.gitignore`
+файлу:
 
-![RStudio screenshot showing .gitignore open in the editor pane with the files .Rproj.user, .Rhistory, .RData, and \*.Rproj added to the end](../fig/RStudio_screenshot_gitignore.png)
+![Знімок екрану RStudio, що показує .gitignore, відкритий у вікні редактора з файлами .Rproj.user, .Rhistory, .RData, та \*.Rproj, доданий до кінця](../fig/RStudio_screenshot_gitignore.png)
 
-> ## Tip: versioning disposable output
+> ## Порада: версіонування одноразового результату
 >
-> Generally you do not want to version control disposable output (or read-only
-> data). You should modify the `.gitignore` file to tell Git to ignore these
-> files and directories.
+> Як правило, ви не хочете, щоб контролювати версії одноразового результату (або тільки для
+> читання даних). Ви повинні змінити файл `.gitignore`, щоб повідомити Git ігнорувати ці
+> файли та директорії.
 {: .callout}
 
-> ## Challenge
+> ## Виклик
 >
-> 1. Create a new directory within your project called `graphs`.
-> 2. Modify the `.gitignore` so that the `graphs` directory is not version controlled.
+> 1. Створіть нову директорію у вашому проєкті під назвою `graphs`.
+> 2. Змініть `.gitignore`, щоб директорія `graphs` не контролювалася версіями.
 >
 >
-> > ## Solution to Challenge
+> > ## Вирішення Виклику
 > >
-> > This can be done in Rstudio:
+> > Це можна зробити в Rstudio:
 > > ```
 > > dir.create("./graphs")
 > > ```
 > > {: .language-r}
-> > Then open up the `.gitignore` file from the right-hand panel of Rstudio and add 
-> > `graphs/` to the list of files to ignore.
+> > Потім відкрийте файл `.gitignore` з правої панелі Rstudio та додайте 
+> > `graphs/` до списку файлів, які слід ігнорувати.
 > {: .solution}
 {: .challenge}
 
-There are many more features in the RStudio Git menu, but these should be
-enough to get you started!
+Є багато інших функцій в меню RStudio Git, але цих повинно бути
+достатньо, щоб почати!
 
 
 [rstudio]: https://www.rstudio.com/
