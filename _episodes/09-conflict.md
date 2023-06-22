@@ -134,7 +134,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ~~~
 {: .output}
 
-![Суперечливі зміни](../fig/conflict.svg)
+![Суперечливі зміни]({{ site.baseurl }}/fig/conflict.svg)
 
 Git відкидає це відправлення, оскільки виявляє, що віддалений репозиторій має нові оновлення, які не були
 включені до локальної гілки.

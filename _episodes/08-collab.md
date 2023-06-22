@@ -29,7 +29,7 @@ keypoints:
 виберіть "Collaborators", натисніть "Add people", та
 потім введіть ім`я вашого партнера.
 
-![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
+![Adding Collaborators on GitHub]({{ site.baseurl }}/fig/github-add-collaborators.png)
 
 Щоб прийняти доступ до репо Власника, Співробітнику
 потрібно перейти до [https://github.com/notifications](https://github.com/notifications) 
@@ -56,7 +56,7 @@ $ git clone git@github.com:vlad/planets.git ~/Desktop/vlad-planets
 ви будете клонувати всередині вашої власної папки планет!
 Переконайтеся, що спочатку ви перейшли до папки `Desktop`.
 
-![Після створення клону репозиторію](../fig/github-collaboration.svg)
+![Після створення клону репозиторію]({{ site.baseurl }}/fig/github-collaboration.svg)
 
 Колаборант тепер може змінити свій клон репозиторію Власника
 точно так само, як ми робили раніше:

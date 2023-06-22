@@ -312,12 +312,12 @@ $ git checkout HEAD mars.txt
 У наведеному нижче прикладі ми хочемо отримати стан перед самим
 нещодавнім комітом (`HEAD~1`), тобто коміт `f22b25e`:
 
-![Git Checkout](../fig/git-checkout.svg)
+![Git Checkout]({{ site.baseurl }}/fig/git-checkout.svg)
 
 Отже, якщо скласти це все разом,
 то Git працює як зображено у цьому коміксі:
 
-![https://figshare.com/articles/How_Git_works_a_cartoon/1328266](../fig/git_staging.svg)
+![https://figshare.com/articles/How_Git_works_a_cartoon/1328266]({{ site.baseurl }}/fig/git_staging.svg)
 
 > ## Спрощення типової ситуації
 >
