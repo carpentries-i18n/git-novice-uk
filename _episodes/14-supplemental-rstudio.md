@@ -22,14 +22,14 @@ RStudio дозволяє нам створювати [проєкт][rstudio-пр
 попередніх версій, і співпрацювати з іншими, ми виконуємо керування проектом Rstudio з Git.
 Для початку використання Git в RStudio ми створюємо новий проєкт:
 
-![[Знімок екрана RStudio, що показує меню файлу, випадаюче з вибраним пунктом "New Project..."](../fig/RStudio_screenshot_newproject.png)
+![[Знімок екрана RStudio, що показує меню файлу, випадаюче з вибраним пунктом "New Project..."]({{ site.baseurl }}/fig/RStudio_screenshot_newproject.png)
 
 Відкриває діалогове вікно з запитанням про те, як ми хочемо створити проєкт. У нас є
 деякі варіанти тут. Припустимо, що ми хочемо використовувати RStudio з
 репозиторієм planets, який ми вже створили. Оскільки цей репозиторій живе в каталозі на нашому комп'ютері, ми
 вибираємо опцію "Existing Directory":
 
-![Знімок екрана RStudio, що показує діалогове вікно New Project за допомогою обраного "Create project from existing directory"](../fig/RStudio_screenshot_existingdirectory.png)
+![Знімок екрана RStudio, що показує діалогове вікно New Project за допомогою обраного "Create project from existing directory"]({{ site.baseurl }}/fig/RStudio_screenshot_existingdirectory.png)
 
 > ## Ви бачите опцію "Version Control"?
 >
@@ -71,25 +71,25 @@ RStudio дозволяє нам створювати [проєкт][rstudio-пр
 Далі RStudio запитає, який існуючий каталог ми хочемо використовувати. Натисніть
 "Browse..." і перейдіть до правильної директорії, потім натисніть"Create Project":
 
-![](../fig/RStudio_screenshot_navigateexisting.png)
+![]({{ site.baseurl }}/fig/RStudio_screenshot_navigateexisting.png)
 
 Та-да! Ми створили новий проект в RStudio в рамках існуючого planets
 репозиторію. Зверніть увагу на вертикальне меню "Git" на панелі меню. RStudio визнав, що
 поточна директорія є Git репозиторієм, і дає нам
 ряд інструментів для використання Git:
 
-! [RStudio вікно після створення нового проєкту з великою стрілкою, що вказує на вертикальну панель меню Git.](../fig/RStudio_screenshot_afterclone.png)
+! [RStudio вікно після створення нового проєкту з великою стрілкою, що вказує на вертикальну панель меню Git.]({{ site.baseurl }}/fig/RStudio_screenshot_afterclone.png)
 
 Щоб редагувати існуючі файли в репозиторії, ми можемо натиснути на них в панелі
 "Files" у правому нижньому куті. Тепер додамо додаткову інформацію
 про Плутон:
 
-![](../fig/RStudio_screenshot_editfiles.png)
+![]({{ site.baseurl }}/fig/RStudio_screenshot_editfiles.png)
 
 Після того, як ми зберегли наші відредаговані файли, ми можемо використовувати RStudio для фіксації змін, 
 натиснувши на "Commit..." в меню Git:
 
-![Знімок екрана RStudio, що показує меню Git, що випадає з вибраним пунктом "Commit..."](../fig/RStudio_screenshot_commit.png)
+![Знімок екрана RStudio, що показує меню Git, що випадає з вибраним пунктом "Commit..."]({{ site.baseurl }}/fig/RStudio_screenshot_commit.png)
 
 Це відкриє діалогове вікно, де ми можемо вибрати, які файли для фіксації (перевіряючи відповідні поля
 в стовпці "Staged"), і ввести повідомлення коміту
@@ -98,13 +98,13 @@ RStudio дозволяє нам створювати [проєкт][rstudio-пр
 панелі (за допомогою результату `git diff`). Як тільки 
 все так, як ми хочемо, ми натискаємо "Commit":
 
-![](../fig/RStudio_screenshot_review.png)
+![]({{ site.baseurl }}/fig/RStudio_screenshot_review.png)
 
 Зміни можна відправити, вибравши "Push Branch" з меню Git. 
 Існують також варіанти отримання змін з віддаленого репозиторію та перегляду історії 
 комітів:
 
-![Знімок екрана RStudio, що показує спадне меню git з вибраним пунктом "History"](../fig/RStudio_screenshot_history.png)
+![Знімок екрана RStudio, що показує спадне меню git з вибраним пунктом "History"]({{ site.baseurl }}/fig/RStudio_screenshot_history.png)
 
 > ## Чи Є Команди Push/Pull Неактивними?
 >
@@ -117,13 +117,13 @@ RStudio дозволяє нам створювати [проєкт][rstudio-пр
 Якщо натиснути на "History", ми можемо побачити графічну версію того, що `git log`
 сказав би нам:
 
-![](../fig/RStudio_screenshot_viewhistory.png)
+![]({{ site.baseurl }}/fig/RStudio_screenshot_viewhistory.png)
 
 RStudio створює ряд файлів, які він використовує для відстеження проєкту. Ми часто
 не хочемо відстежувати їх; в цьому випадку ми додаємо їх до нашого `.gitignore`
 файлу:
 
-![Знімок екрану RStudio, що показує .gitignore, відкритий у вікні редактора з файлами .Rproj.user, .Rhistory, .RData, та \*.Rproj, доданий до кінця](../fig/RStudio_screenshot_gitignore.png)
+![Знімок екрану RStudio, що показує .gitignore, відкритий у вікні редактора з файлами .Rproj.user, .Rhistory, .RData, та \*.Rproj, доданий до кінця]({{ site.baseurl }}/fig/RStudio_screenshot_gitignore.png)
 
 > ## Порада: версіонування одноразового результату
 >

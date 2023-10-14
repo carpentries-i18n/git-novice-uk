@@ -32,7 +32,7 @@ keypoints:
 Увійдіть до [GitHub](https://github.com), потім натисніть на значок у верхньому правому куті, щоб
 створити новий репозиторій під назвою `planets`:
 
-![Створення репозиторію у GitHub (Крок 1)](../fig/github-create-repo-01.png)
+![Створення репозиторію у GitHub (Крок 1)]({{ site.baseurl }}/fig/github-create-repo-01.png)
 
 Назвіть ваш репозиторій "planets" і потім натисніть на "Create Repository".
 
@@ -41,12 +41,12 @@ keypoints:
 .gitignore" та "Add a license." Ознайомтеся із вправою "GitHub License and README files" нижче для повного
 пояснення чому репозиторій повинен бути порожнім.
 
-![Створення репозиторію у GitHub (Крок 2)](../fig/github-create-repo-02.png)
+![Створення репозиторію у GitHub (Крок 2)]({{ site.baseurl }}/fig/github-create-repo-02.png)
 
 Як тільки репозиторій створено, GitHub відображає сторінку з URL і певною
 інформацією про те, як налаштувати локальний репозиторій:
 
-![Створення репозиторію у GitHub (Крок 3)](../fig/github-create-repo-03.png)
+![Створення репозиторію у GitHub (Крок 3)]({{ site.baseurl }}/fig/github-create-repo-03.png)
 
 Це ефективно робить наступне на серверах GitHub:
 
@@ -61,11 +61,11 @@ $ git init
 зберігали нашу попередню роботу над `mars.txt`, в нас була діаграма, яка зображувала локальний репозиторій,
 та виглядала так:
 
-![Локальний репозиторій із зоною стейджингу](../fig/git-staging-area.svg)
+![Локальний репозиторій із зоною стейджингу]({{ site.baseurl }}/fig/git-staging-area.svg)
 
 Тепер, коли ми маємо два репозиторії, нам потрібна така діаграма:
 
-![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.svg)
+![Freshly-Made GitHub Repository]({{ site.baseurl }}/fig/git-freshly-made-github-repo.svg)
 
 Зауважте, що наш локальний репозиторій все ще містить нашу попередню роботу над `mars.txt`, але
 віддалений репозиторій на GitHub зображується порожнім, оскільки він ще не містить жодних файлів.
@@ -76,7 +76,7 @@ GitHub репозиторію [remote]({{ page.root}}{% link reference.md %}#rem
 Домашня сторінка репозиторію на GitHub включає рядок URL, який нам потрібен
 щоб ідентифікувати його:
 
-![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
+![Where to Find Repository URL on GitHub]({{ site.baseurl }}/fig/github-find-repo-string.png)
 
 Натисніть на посилання 'SSH', щоб змінити [protocol]({{ page.root }}{% link reference.md %}#protocol) від HTTPS до SSH.
 
@@ -88,7 +88,7 @@ GitHub репозиторію [remote]({{ page.root}}{% link reference.md %}#rem
 > і концепції SSH і пари ключів, а також інші матеріали, що доповнюють git пов'язані SSH. 
 {: .callout}
 
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
+![Changing the Repository URL on GitHub]({{ site.baseurl }}/fig/github-change-repo-string.png)
 
 Скопіюйте цю URL-адресу з браузера, зайдіть в локальне сховище `planets` репозиторію, та запустіть
 цю команду:
@@ -360,7 +360,7 @@ To https://github.com/vlad/planets.git
 
 Наші локальні та віддалені сховища зараз у такому стані:
 
-![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
+![GitHub Repository After First Push]({{ site.baseurl }}/fig/github-repo-after-first-push.svg)
 
 > ## Опція '-u'
 >
