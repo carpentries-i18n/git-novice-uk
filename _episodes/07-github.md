@@ -32,21 +32,21 @@ keypoints:
 Увійдіть до [GitHub](https://github.com), потім натисніть на значок у верхньому правому куті, щоб
 створити новий репозиторій під назвою `planets`:
 
-![Creating a Repository on GitHub (Step 1)]({{ site.baseurl }}/fig/github-create-repo-01.png)
+![Створення репозиторію у GitHub (Крок 1)](../fig/github-create-repo-01.png)
 
 Назвіть ваш репозиторій "planets" і потім натисніть на "Create Repository".
 
-Зауважте: Оскільки цей репозиторій буде підключено до локального сховища, він має бути порожнім. Залиште 
+Зауважте: Оскільки цей репозиторій буде підʼєднано до локального репозиторію, він має бути порожнім. Залиште 
 "Initialize this repository with a README" непозначеним, та залиште "None" як опції для обох "Add 
-.gitignore" та "Add a license." Ознайомтеся з "GitHub License and README files" вправою нижче для повного
+.gitignore" та "Add a license." Ознайомтеся із вправою "GitHub License and README files" нижче для повного
 пояснення чому репозиторій повинен бути порожнім.
 
-![Creating a Repository on GitHub (Step 2)]({{ site.baseurl }}/fig/github-create-repo-02.png)
+![Створення репозиторію у GitHub (Крок 2)](../fig/github-create-repo-02.png)
 
 Як тільки репозиторій створено, GitHub відображає сторінку з URL і певною
 інформацією про те, як налаштувати локальний репозиторій:
 
-![Creating a Repository on GitHub (Step 3)]({{ site.baseurl }}/fig/github-create-repo-03.png)
+![Створення репозиторію у GitHub (Крок 3)](../fig/github-create-repo-03.png)
 
 Це ефективно робить наступне на серверах GitHub:
 
@@ -57,26 +57,26 @@ $ git init
 ~~~
 {: .language-bash}
 
-Якщо ви пам'ятаєте, раніше [episode](../04-changes/) ми додавали та
-комітили нашу попередню роботу над `mars.txt`. У нас була діаграма локального репозиторію,
-яка виглядала так:
+Якщо ви пам'ятаєте, у одному з попередніх [епізодів](../04-changes/), де ми додавали та
+зберігали нашу попередню роботу над `mars.txt`, в нас була діаграма, яка зображувала локальний репозиторій,
+та виглядала так:
 
-![The Local Repository with Git Staging Area]({{ site.baseurl }}/fig/git-staging-area.svg)
+![Локальний репозиторій із зоною стейджингу](../fig/git-staging-area.svg)
 
 Тепер, коли ми маємо два репозиторії, нам потрібна така діаграма:
 
-![Freshly-Made GitHub Repository]({{ site.baseurl }}/fig/git-freshly-made-github-repo.svg)
+![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.svg)
 
 Зауважте, що наш локальний репозиторій все ще містить нашу попередню роботу над `mars.txt`, але
-віддалений репозиторій на GitHub виявляється порожнім, оскільки він ще не містить жодних файлів.
+віддалений репозиторій на GitHub зображується порожнім, оскільки він ще не містить жодних файлів.
 
-## 2. Підключення локального репозиторію до віддаленого
+## 2. Підʼєднання локального репозиторію до віддаленого
 Тепер підключаємо два сховища. Ми можемо це зробити за допомогою
 GitHub репозиторію [remote]({{ page.root}}{% link reference.md %}#remote) для локального репозиторію.
 Домашня сторінка репозиторію на GitHub включає рядок URL, який нам потрібен
 щоб ідентифікувати його:
 
-![Where to Find Repository URL on GitHub]({{ site.baseurl }}/fig/github-find-repo-string.png)
+![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
 
 Натисніть на посилання 'SSH', щоб змінити [protocol]({{ page.root }}{% link reference.md %}#protocol) від HTTPS до SSH.
 
@@ -88,7 +88,7 @@ GitHub репозиторію [remote]({{ page.root}}{% link reference.md %}#rem
 > і концепції SSH і пари ключів, а також інші матеріали, що доповнюють git пов'язані SSH. 
 {: .callout}
 
-![Changing the Repository URL on GitHub]({{ site.baseurl }}/fig/github-change-repo-string.png)
+![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
 
 Скопіюйте цю URL-адресу з браузера, зайдіть в локальне сховище `planets` репозиторію, та запустіть
 цю команду:
@@ -119,7 +119,7 @@ origin   git@github.com:vlad/planets.git (push)
 {: .output}
 
 Більш детально ми обговоримо віддалені файли в наступному епізоді, поки поговоримо про те,
-як вони можуть бути використані для колаборації.
+як вони можуть бути використані для співпраці.
 
 ## 3. SSH Фон та Налаштування
 Перед тим, як Dracula може під`єднатися до віддаленого репозиторію, йому потрібно налаштувати спосіб автентифікації свого комп'ютера за допомогою GitHub, щоб він знав, що це він намагається під`єднатися до його віддаленого репозиторію. 
@@ -360,7 +360,7 @@ To https://github.com/vlad/planets.git
 
 Наші локальні та віддалені сховища зараз у такому стані:
 
-![GitHub Repository After First Push]({{ site.baseurl }}/fig/github-repo-after-first-push.svg)
+![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
 
 > ## Опція '-u'
 >

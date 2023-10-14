@@ -239,73 +239,73 @@ title: "Нотатки інструктора"
     Найкращий спосіб досягти цього - перейти на `Робочий стіл` перед клонуванням: `cd &&
     cd Desktop`.
 
-*   If both repos are in the `Desktop`, have them to clone their collaborator
-    repo under a given directory using a second argument:
+*   Якщо обидва репо знаходяться в `Робочому столі` - нехай вони клонують репо свого співавтора
+    під заданим каталогом, використовуючи другий аргумент:
 
     ~~~
     $ git clone https://github.com/vlad/planets.git vlad-planet
     ~~~
     {: .language-bash}
 
-*   The most common mistake is that learners `push` before `pull`ing. If they
-    `pull` afterward, they may get a conflict.
+*   Найпоширенішою помилкою є те, що учні `відправляють` зміни перед тим, як `отримати` їх. Якщо вони
+    `отримають` зміни після їх відправлення - може виникнути конфлікт.
 
-*   Conflicts, sometimes weird, will start to arise. Stay tight: conflicts are
-    next.
+*   Почнуть виникати іноді дивні конфлікти. Зверніть увагу: конфлікти 
+    наступні.
 
-*   Learners may have slightly different output from `git push` and `git pull`
-    depending on the version of git, and if upstream (`-u`) is used.
+*   Учні можуть мати трохи інший результат від `git push` та `git pull`,
+    залежно від версії git, і якщо використовується upstream (`-u`).
 
 ## [Конфлікти]({{ page.root }}{% link _episodes/09-conflict.md %})
 
-*   Expect the learners to make mistakes. Expect *yourself* to make mistakes.
-    This happens because it is late in the lesson and everyone is tired.
+*   Очікуйте, що учні зроблять помилки. Очікуйте, що *ви* можете зробити помилки.
+    Це відбувається тому, що урок триває вже достатньо довго і всі втомилися.
 
-*   If you're the only instructor, the best way to create a conflict is:
+*   Якщо ви єдиний інструктор, найкращий спосіб створити конфлікт:
 
-    *   Clone your repo in a different directory, pretending is your computer at
-        work: `git clone https://github.com/vlad/planets.git planets-at-work`.
-    *   At the office, you make a change, commit and push.
-    *   At your laptop repo, you (forget to pull and) make a change, commit and
-        try to push.
-    *   `git pull` now and show the conflict.
+    *   Клонуйте свій репо в іншу директорію, вдаючи, що ваш компʼютер знаходиться на
+        роботі: `git clone https://github.com/vlad/planets.git planets-at-work`.
+    *   В офісі ви зробите зміни, закомітите та відправите зміни.
+    *   В репо на вашому компʼютері, ви (забули отримати зміни та) робите зміни, комітите та
+        намагаєтеся відправити їх.
+    *   тепер введіть `git pull` та покажіть як виглядає конфлікт.
 
-*   Learners usually forget to `git add` the file after fixing the conflict and
-    just (try to) commit. You can diagnose this with `git status`.
+*   Учні зазвичай забувають `git add` файл після виправлення конфлікту та
+    просто (намагаються) комітять. Ви можете це продіагнозувати за допомогою `git status`.
 
-*   Remember that you can discard one of the two parents of the merge:
+*   Памʼятайте, що можна відкинути одного з двох батьків злиття:
 
-    *   discard the remote file, `git checkout --ours conflicted_file.txt`
-    *   discard the local file, `git checkout --theirs conflicted_file.txt`
+    *   відкинути віддалений файл, `git checkout --ours conflicted_file.txt`
+    *   відкинути локальний файл, `git checkout --theirs conflicted_file.txt`
 
-    You still have to `git add` and `git commit` after this. This is
-    particularly useful when working with binary files.
+    Ви все ще повинні зробити `git add` та `git commit` після цього. Особливо
+    це корисно при роботі з бінарними файлами.
 
-*  Keep in mind that depending on the Git version used, the outputs for
-   `git push` and `git pull` can vary slightly.
+*  Майте на увазі, що в залежності від використовуваної версії Git, результати для
+   `git push` та `git pull` можуть дещо відрізнятися.
 
 ## [Відкрита наука]({{ page.root }}{% link _episodes/10-open.md %})
 
 ## [Ліцензування]({{ page.root }}{% link _episodes/11-licensing.md %})
 
-We teach about licensing because questions about who owns what, or can use
-what, arise naturally once we start talking about using public services like
-GitHub to store files. Also, the discussion gives learners a chance to catch
-their breath after what is often a frustrating couple of hours.
+Ми вчимо про ліцензування, тому що питання про те, хто володіє чим, або що може використовувати,
+виникають природно, як тільки ми починаємо говорити про використання державних послуг, як
+GitHub для зберігання файлів. Також дискусія дає учням шанс перевести
+їх дух після того, що часто розчаровує протягом декількох годин.
 
-The Creative Commons family of licenses is recommended for many types of
-works (including software documentation and images used in software) but not
-software itself. Creative Commons [recommends][cc-faq-software] a
-software-specific license instead.
+Сімейство ліцензій The Creative Commons рекомендується для багатьох типів
+робот (включаючи програмну документацію та зображення, які використовуються в програмному забезпеченні), але не
+власне програмне забезпечення. Creative Commons [рекомендує][cc-faq-software]
+ліцензію на програмне забезпечення.
 
 ## [Цитування]({{ page.root }}{% link _episodes/12-citation.md %})
 
 ## [Хостинг]({{ page.root }}{% link _episodes/13-hosting.md %})
 
-A common concern for learners is having their work publicly available on
-GitHub.  While we encourage open science, sometimes private repos are the
-only choice. It's always interesting to mention the options to have
-web-hosted private repositories.
+Загальна турбота для учнів - мати їх роботу публічно доступною на
+GitHub.  Хоча ми заохочуємо відкриту науку, іноді приватні репо є
+єдиним вибором. Завжди цікаво згадати варіанти розміщення приватних
+репозиторіїв.
 
 [cc-faq-software]: https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software
 [code-school]: https://www.codeschool.com/
